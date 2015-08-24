@@ -2,7 +2,7 @@
 
 An app manages Huskies Football Roster. A husky football player can be added, updated, and deleted utilizing all 4 CRUD methods with Mongoose.
 
-## Routes to build this app:
+Routes to build this app:
 
 - GET '/' Displays all of the players.
 - GET '/mongooses/:id' Displays information about one player.
