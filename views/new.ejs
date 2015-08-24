@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Add a New Husky</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/style.css' />
+    
+
+</head>
+<body>
+    <div class = "container">
+        <h2>Add a new Husky information</h2><br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <% if(typeof(errors) != 'undefined' ) { %>
+                            <div id ="errors">
+                                <% for (var x in errors) { %>
+                                    <p><%= errors[x].message %></p>
+                                <% } %>
+                            </div>
+                        <% } %>
+       
+                        <form class="form-horizontal" action="/huskies" method="post">
+                            <div class="form-group">
+                                <label for="no" class="col-sm-3 control-label">No.</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="no" placeholder="No." name="no">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="first_name" class="col-sm-3 control-label">First Name</label>
+                                <div class="col-sm-9">
+                                     <input type="text" class="form-control" id="first_name" placeholder="First Name", name="first_name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name" class="col-sm-3 control-label">Last Name</label>
+                                <div class="col-sm-9">
+                                     <input type="text" class="form-control" id="last_name" placeholder="Last Name", name="last_name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="position" class="col-sm-3 control-label">Position</label>
+                                <div class="col-sm-9">
+                                     <input type="text" class="form-control" id="position" placeholder="Position", name="position">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="year" class="col-sm-3 control-label">Year</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="year" placeholder="Year", name="year">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hometown" class="col-sm-3 control-label">Hometown</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="hometown" placeholder="Hometown", name="hometown">
+                                </div>
+                            </div>
+                            <button class="btn btn-default pull-right" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <a class="btn btn-default pull-right" href="/" role="button">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

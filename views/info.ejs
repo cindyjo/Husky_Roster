@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Information</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/style.css' />
+
+</head>
+<body>
+    <div class = "container">
+        <h2># <%=husky.no%> <%=husky.first_name%> <%=husky.last_name%></h2><br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="pull-right"><strong>Position</strong></p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="pull-left"><%=husky.position%></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="pull-right"><strong>Year</strong></p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="pull-left"><%=husky.year%></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="pull-right"><strong>Hometown</strong></p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="pull-left"><%=husky.hometown%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-default pull-right" href="/" role="button">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Husky Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='style.css' />
+
+</head>
+<body>
+    <div class = "container">
+        <h2>Welcome to 2015 Huskies Football Roster</h2><br>
+        <table class="table table-striped">
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Year</th>
+                <th>Hometown</th>
+                <th>Action</th>
+            </tr>
+            <% for (var x in huskies) { %>
+                <tr>
+                    <td><%=huskies[x].no%></td>
+                    <td><a href="/huskies/<%=huskies[x]._id%>"><%=huskies[x].last_name%>, <%=huskies[x].first_name%></a></td>
+                    <td><%=huskies[x].position%></td>
+                    <td><%=huskies[x].year%></td>
+                    <td><%=huskies[x].hometown%></td>
+                    <td><a href="/huskies/<%=huskies[x]._id%>/edit">Edit</a> | <a href="/huskies/<%=huskies[x]._id%>/destroy">Remove</a></td>
+                </tr>
+            <% } %> 
+        </table>
+        <a class="btn btn-default" href="/huskies/new" role="button">Add a new husky</a>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
